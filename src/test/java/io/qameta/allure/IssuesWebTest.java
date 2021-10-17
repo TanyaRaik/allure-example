@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
  * @author eroshenkoam (Artem Eroshenko).
  */
 @Layer("web")
-@Owner("eroshenkoam")
+@Owner("rike")
 @Feature("Issues")
 public class IssuesWebTest {
 
@@ -28,10 +28,9 @@ public class IssuesWebTest {
     }
 
     @Test
-    @TM4J("AE-T3")
     @Microservice("Billing")
     @Story("Create new issue")
-    @JiraIssues({@JiraIssue("AE-2")})
+    @JiraIssues({@JiraIssue("HOMEWORK-252")})
     @Tags({@Tag("web"), @Tag("critical")})
     @DisplayName("Creating new issue authorized user")
     public void shouldCreateIssue() {
@@ -41,11 +40,10 @@ public class IssuesWebTest {
     }
 
     @Test
-    @TM4J("AE-T4")
     @Microservice("Repository")
     @Story("Create new issue")
     @Tags({@Tag("web"), @Tag("regress")})
-    @JiraIssues({@JiraIssue("AE-1")})
+    @JiraIssues({@JiraIssue("HOMEWORK-252")})
     @DisplayName("Adding note to advertisement")
     public void shouldAddLabelToIssue() {
         steps.openIssuesPage(OWNER, REPO);
@@ -54,11 +52,10 @@ public class IssuesWebTest {
     }
 
     @Test
-    @TM4J("AE-T5")
     @Microservice("Repository")
     @Story("Close existing issue")
     @Tags({@Tag("web"), @Tag("regress")})
-    @JiraIssues({@JiraIssue("AE-1")})
+    @JiraIssues({@JiraIssue("HOMEWORK-252")})
     @DisplayName("Closing new issue for authorized user")
     public void shouldCloseIssue() {
         steps.openIssuesPage(OWNER, REPO);
