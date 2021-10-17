@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
  * @author eroshenkoam (Artem Eroshenko).
  */
 @Layer("web")
-@Owner("rike")
+@Owner("atam")
 @Feature("Pull Requests")
 public class PullRequestsWebTest {
 
